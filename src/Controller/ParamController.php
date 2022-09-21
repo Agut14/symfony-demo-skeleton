@@ -38,7 +38,7 @@ class ParamController {
         ]);
     }
 
-    #[Route('/attributes', name: 'get-attributes', methods: ['GET'])]
+    #[Route('/frombody', name: 'get-from-body', methods: ['POST'])]
     public function getFromBody(Request $request): Response {
         
         $request->request =  new ParameterBag(json_decode($request->getContent(), associative: true));
